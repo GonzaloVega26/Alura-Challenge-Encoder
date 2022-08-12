@@ -20,16 +20,24 @@
     </header>
 
     <main>
+        
         <textarea name="encrypt-box" id="encrypt-box" 
-        class="text-box" placeholder="Enter Text To Encrypt"></textarea>
-
+        class="text-box" placeholder="Enter Text To Encrypt" required></textarea>
+        
+        
+        <button type="#" id="change-btn" class="btn change-btn">Change</button>
+        <span class="popup-text" id="popup-text">Text Copied</span>
         
         <textarea name="decrypt-box" id="decrypt-box" 
-        class="text-box" placeholder="No Text Encrypted" readonly></textarea>
+        class="text-box decrypt-box" placeholder="Waiting for text To encrypt" readonly></textarea>
 
-        <button type="submit" disabled="disabled" id="copy-btn"
-         class="copy-btn btn">Copy!</button>
-        <button type="submit" id="encrypt-decrypt-btn" class="encrypt-decrypt-btn btn">Encrypt</button>
+        <button type="submit" id="copy-btn-left"
+            class="btn copy-btn copy-btn-left">Copy!</button>
+
+        <button type="submit" id="copy-btn-right"
+        class="btn  copy-btn copy-btn-right">Copy!</button>
+        <button type="submit" id="action-btn" class="action-btn btn" value="encrypt">Encrypt</button>
+
         
     </main>
 
@@ -54,6 +62,7 @@
                     <img src="./assets/freepik-logo.png" class="media-logo">
                     Freepik.es
                 </a>
+                <a href='https://www.freepik.es/vectores/elegir'></a>
             </li>
 
         </ul>

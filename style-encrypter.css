@@ -28,26 +28,28 @@ main{
     height: 400px;
     width: 25%;
     margin: 35px 35px 15px 35px;
+    text-transform: lowercase;
     
    
 }
 
-#decrypt-box {
+.decrypt-box {
     background: url(assets/secret-message.jpg) no-repeat local center;
     background-size: contain;
 }
 
-.encrypt-decrypt-btn{
-    display: block;
-    width: 50%;
-    height: 3em;
-    margin: 0 auto;
-    
-    
+.encrypt-box{
+    background: url(assets/public-message.jpg) no-repeat local center;
+    background-size: contain;
 }
+
+
+
 .btn{
+    width: auto;
+    color: white;
     border-radius: 10px;
-    transition: 1s;
+    transition: 0.5s;
     background-color: darkslategrey;
     border: none;
     
@@ -58,14 +60,48 @@ main{
     scale: 1.2;
     cursor: pointer;
 }
+
+.btn:active{
+    background-color: green;
+    
+}
+
+.action-btn{
+    display: block;
+    width: 50%;
+    height: 3em;
+    margin: 0 auto;
+    
+}
+.change-btn{
+
+    font-size: 20px;
+    position: relative;
+    bottom: 250px;
+}
 .copy-btn{
     width: auto;
     position: relative;
-    bottom: 25px;
-    right: 30px;
     font-size: 16px;
-    color: white;
     padding: 5px;
+}
+
+.copy-btn-left{
+    bottom: 25px;
+    right: 70%;
+}
+.copy-btn-right{
+    bottom: 25px;
+    right: 6%;
+    
+}
+
+.popup-text{
+    font-size: 25px;
+    position: absolute;
+    left: 43%;
+    justify-content: center;
+    visibility: hidden;
 }
 
 footer{
