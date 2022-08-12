@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
+header{
+    display: flex;
+    background-color: cornflowerblue;
+    padding: 15px;
+}
+
+header img{
+    height: 35px;
+}
+header h1{
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Gloria Hallelujah', cursive, Arial, Helvetica, sans-serif;
+    margin-left: 15px;
+    color: white;
+}
+
+main{
+    width: 100%;
+    text-align: center;
+}
+.text-box{
+    resize: none;
+    height: 400px;
+    width: 25%;
+    margin: 35px 35px 15px 35px;
+    
+   
+}
+
+#decrypt-box {
+    background: url(assets/secret-message.jpg) no-repeat local center;
+    background-size: contain;
+}
+
+.encrypt-decrypt-btn{
+    display: block;
+    width: 50%;
+    height: 3em;
+    margin: 0 auto;
+    
+    
+}
+.btn{
+    border-radius: 10px;
+    transition: 1s;
+    background-color: darkslategrey;
+    border: none;
+    
+
+}
+.btn:hover{
+    background-color: darkcyan;
+    scale: 1.2;
+    cursor: pointer;
+}
+.copy-btn{
+    width: auto;
+    position: relative;
+    bottom: 25px;
+    right: 30px;
+    font-size: 16px;
+    color: white;
+    padding: 5px;
+}
+
+footer{
+    border-top: 5px solid cornflowerblue;
+    margin-top: 15px;
+    height: 50px;
+}
+
+.contact{
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+}
+.media-logo {
+   
+    width: 2.5em;
+}

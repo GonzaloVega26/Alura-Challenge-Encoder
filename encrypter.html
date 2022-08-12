@@ -11,22 +11,53 @@
 <body>
     
     <header>
+        <a href="https://www.aluracursos.com/"><img src="./assets/alura-logo.png" alt="Logo de Alura"></a>
+        
         <h1>Encrypter</h1>
-        <img src="./assets/alura-logo.png" alt="Logo de Alura">
+        <nav>
+
+        </nav>
     </header>
+
     <main>
         <textarea name="encrypt-box" id="encrypt-box" 
-        cols="30" rows="10" class="text-box"></textarea>
+        class="text-box" placeholder="Enter Text To Encrypt"></textarea>
 
+        
         <textarea name="decrypt-box" id="decrypt-box" 
-        cols="30" rows="10" class="text-box"></textarea>
+        class="text-box" placeholder="No Text Encrypted" readonly></textarea>
 
-        <button type="submit" id="encrypt-decrypt-btn">Encrypt</button>
-        <button disabled="disabled" id="copy-btn">Copy!</button>
+        <button type="submit" disabled="disabled" id="copy-btn"
+         class="copy-btn btn">Copy!</button>
+        <button type="submit" id="encrypt-decrypt-btn" class="encrypt-decrypt-btn btn">Encrypt</button>
+        
     </main>
 
     <footer>
-        <a href='https://www.freepik.es/vectores/confidencialidad'>Vector de confidencialidad creado por storyset - www.freepik.es</a>
+        <ul class="contact">
+            <li>
+                <a href="https://www.linkedin.com/in/gonzalo-vega26/"> 
+                    <img src="./assets/linkedin-icon.png" class="media-logo">
+                    Linkedin
+                </a>
+            </li>
+
+            <li>
+                <a href="https://github.com/GonzaloVega26"> 
+                    <img src="./assets/github-icon.png" class="media-logo">
+                    Linkedin
+                </a>
+            </li>
+
+            <li>
+                <a href="https://www.freepik.es/vectores/confidencialidad"> 
+                    <img src="./assets/freepik-logo.png" class="media-logo">
+                    Freepik.es
+                </a>
+            </li>
+
+        </ul>
+        
     </footer>
         <script src="encrypter.js"></script>
 </body>
