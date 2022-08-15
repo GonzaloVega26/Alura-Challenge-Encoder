@@ -150,7 +150,7 @@ function decrypt(text){
 
 function validText(text){
     for (const letter of text) {
-        if(letter < "a" || (letter > "z" && letter !== "ñ")) return false;
+        if((letter < "a" && letter !== " ") || (letter > "z" && letter !== "ñ")) return false;
     }
     
     return true;
