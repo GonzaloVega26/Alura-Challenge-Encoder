@@ -89,24 +89,23 @@ function activateTextBox(textBox, className){
    
 }
 function takeAction(btnValue){
+
     if(btnValue === "encrypt"){
 
-        if(encryptBox.value){
+        if(encryptBox.value && validText(encryptBox.value.toLowerCase())){
             decryptBox.value = encrypt(encryptBox.value.toLowerCase())
-        decryptBox.classList.remove("decrypt-box")
-        }else{
-            alert("Enter text to encrypt")
+            decryptBox.classList.remove("decrypt-box")
+            return;
         }
-
     }else{
-
-        if(decryptBox.value){
+        if(decryptBox.value && validText(decryptBox.value.toLowerCase())){
             encryptBox.value = decrypt(decryptBox.value.toLowerCase())
             encryptBox.classList.remove("encrypt-box") 
-        }else{
-            alert("Enter text to decrypt")
+            return;
         }
+    
     }
+    alert("Enter valid text, only letters 'a' to 'z'")
 }
 
 
@@ -147,4 +146,12 @@ function decrypt(text){
     text = text.replaceAll("ufat", "u")
 
     return text
+}
+
+function validText(text){
+    for (const letter of text) {
+        if(letter < "a" || (letter > "z" && letter !== "ñ")) return false;
+    }
+    
+    return true;
 }

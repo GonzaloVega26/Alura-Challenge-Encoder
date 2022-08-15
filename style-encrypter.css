@@ -84,7 +84,7 @@ main{
     display: block;
     width: 50%;
     height: 3em;
-    margin: 0 auto;
+    margin: 1rem auto;
     
 }
 .change-btn{
@@ -132,8 +132,12 @@ footer{
     display: flex;
     justify-content: space-around;
 }
+
+.contact-item{
+    
+}
 .media-logo {
-   
+   margin-right: 5px;
     width: 2.5em;
 }
 
@@ -141,6 +145,9 @@ footer{
 a{
     text-decoration: none;
     transition: 0.5s;
+    display: flex;
+    align-items: center;
+    
 }
 
 
