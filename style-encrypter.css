@@ -20,17 +20,31 @@ header h1{
 }
 
 main{
-    width: 100%;
     text-align: center;
+    position: relative;
 }
 .text-box{
     resize: none;
-    height: 400px;
-    width: 25%;
-    margin: 35px 35px 15px 35px;
+    height: 30vw;
+    width: 100%;
     text-transform: lowercase;
+}
+
+.box{
+    display: inline-block;
+    position: relative;
+    width: 30%;
+    height: 100%;
+    margin-top: 1rem;
     
-   
+}
+
+.box:first-of-type{
+    margin-right: 5%;
+}
+
+.box:last-of-type{
+    margin-left: 5%;
 }
 
 .decrypt-box {
@@ -74,34 +88,37 @@ main{
     
 }
 .change-btn{
-
-    font-size: 20px;
-    position: relative;
-    bottom: 250px;
+    font-size: 30px;
+    position: absolute;
+    top: 35%;
+    left: 48%;
 }
 .copy-btn{
-    width: auto;
-    position: relative;
+    width: 100%;
     font-size: 16px;
     padding: 5px;
-}
-
-.copy-btn-left{
-    bottom: 25px;
-    right: 70%;
-}
-.copy-btn-right{
-    bottom: 25px;
-    right: 6%;
-    
+    position: absolute;
+    bottom: 2%;
+    left: 1.1%;
 }
 
 .popup-text{
-    font-size: 25px;
+    width: auto;
+    padding: 5px;
+    font-size: 1.8em;
     position: absolute;
-    left: 43%;
-    justify-content: center;
+    bottom: 10%;
+    background-color: #00468B;
+    border-radius: 10%;
+    color: white;
     visibility: hidden;
+}
+
+.popup-text-left{
+    left: 30%;
+}
+.popup-text-right{
+    left: 35%;
 }
 
 footer{
@@ -118,4 +135,36 @@ footer{
 .media-logo {
    
     width: 2.5em;
+}
+
+
+a{
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+
+a:visited{
+    color: initial;
+}
+
+a:hover{
+    color: darkcyan;
+}
+
+
+@media screen and (max-width:768px) {
+    .box{
+        display: block;
+        
+    }
+    .box:first-of-type{
+        margin: 1rem auto;
+    }
+    .box:last-of-type{
+        margin: 1rem auto;
+    }
+    .change-btn{
+        position: static;
+    }
 }

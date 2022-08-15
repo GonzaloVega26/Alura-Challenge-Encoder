@@ -8,7 +8,8 @@ const copyBtnRight = document.getElementById("copy-btn-right");
 
 const changeBtn = document.getElementById("change-btn");
 
-const popupText = document.getElementById("popup-text")
+const popupTextLeft = document.getElementById("popup-text-left")
+const popupTextRight = document.getElementById("popup-text-right")
 
 actionBtn.addEventListener("click", ()=>{
     takeAction(actionBtn.value)
@@ -18,23 +19,23 @@ actionBtn.addEventListener("click", ()=>{
 
 copyBtnLeft.addEventListener("click", ()=>{
     if(encryptBox.value){
-        displayCopyMessage("Text Copied!")
+        displayCopyMessage(popupTextLeft,"Text Copied!")
         navigator.clipboard.writeText(encryptBox.value); //Copy text to clipboard
     }else{
-        displayCopyMessage("No Text To copy")
+        displayCopyMessage(popupTextLeft,"No Text To copy")
     }
 })
 
 copyBtnRight.addEventListener("click", ()=>{
-    if(encryptBox.value){
-        displayCopyMessage("Text Copied!")
+    if(decryptBox.value){
+        displayCopyMessage(popupTextRight,"Text Copied!")
         navigator.clipboard.writeText(decryptBox.value); //Copy text to clipboard
     }else{
-        displayCopyMessage("No Text To copy")
+        displayCopyMessage(popupTextRight,"No Text To copy")
     }
 })
 
-function displayCopyMessage(message){
+function displayCopyMessage(popupText,message){
     popupText.innerText = message
     popupText.style.visibility = "visible"
     setTimeout(() => {
@@ -89,14 +90,22 @@ function activateTextBox(textBox, className){
 }
 function takeAction(btnValue){
     if(btnValue === "encrypt"){
-        decryptBox.value = encrypt(encryptBox.value.toLowerCase())
+
+        if(encryptBox.value){
+            decryptBox.value = encrypt(encryptBox.value.toLowerCase())
         decryptBox.classList.remove("decrypt-box")
-        
-        
+        }else{
+            alert("Enter text to encrypt")
+        }
 
     }else{
-        encryptBox.value = decrypt(decryptBox.value.toLowerCase())
-        encryptBox.classList.remove("encrypt-box") 
+
+        if(decryptBox.value){
+            encryptBox.value = decrypt(decryptBox.value.toLowerCase())
+            encryptBox.classList.remove("encrypt-box") 
+        }else{
+            alert("Enter text to decrypt")
+        }
     }
 }
 
@@ -127,7 +136,6 @@ function encrypt(text){
             default:  ecriptedText += letter
         }
     }
-
     return ecriptedText;
 }
 
